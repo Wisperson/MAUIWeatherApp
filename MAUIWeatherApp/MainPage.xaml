@@ -1,43 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MAUIWeatherApp.MainPage">
+             x:Class="MAUIWeatherApp.MainPage"
+             Title="MAUIWeatherApp">
 
     <ScrollView>
         <VerticalStackLayout
+            x:Name="DynamicWeatherContainer"
             Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
+            Padding="30"
+            VerticalOptions="Start">
 
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
+            <AbsoluteLayout
+                WidthRequest="400"
+                HeightRequest="200"
+                BackgroundColor="#09295A">
 
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
-            <StackLayout x:Name="ImageStack" HorizontalOptions="Center">
-                <!-- Initial Image -->
                 <Image
-                    x:Name="dotnetBotImage"
-                    Source="dotnet_bot.png"
-                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                    HeightRequest="200" />
-            </StackLayout>
+                    AbsoluteLayout.LayoutBounds="10,10, 100, 100"
+                    Source="dotnet_bot.png"/>
+                <Label
+                    AbsoluteLayout.LayoutBounds="120, 10"
+                    Text="Name"/>
+                <Label
+                    AbsoluteLayout.LayoutBounds="120, 25"
+                    Text="Name"/>
+                <Label
+                    AbsoluteLayout.LayoutBounds="120, 40"
+                    Text="Name"/>
+                <Label
+                    AbsoluteLayout.LayoutBounds="120, 55"
+                    Text="Name"/>
+                <Label
+                    AbsoluteLayout.LayoutBounds="120, 70"
+                    Text="Name"/>
+                <AbsoluteLayout
+                    AbsoluteLayout.LayoutBounds="10, 120"
+                    HeightRequest="50"
+                    WidthRequest="100"
+                    BackgroundColor="#1A935A">
 
+                    <Label
+                        AbsoluteLayout.LayoutBounds="5, 0"
+                        Text="Wind"/>
+                    <Label
+                        AbsoluteLayout.LayoutBounds="5, 15"
+                        Text="Wind"/>
+                    <Label
+                        AbsoluteLayout.LayoutBounds="5, 30"
+                        Text="Wind"/>
+                </AbsoluteLayout>
+                <Entry
+                    AbsoluteLayout.LayoutBounds="290, 100"
+                    MinimumWidthRequest="100"
+                    FontSize="Micro"
+                    HorizontalOptions="End"
+                    Placeholder="City"/>
+                <Button
+                    x:Name="StartButton"
+                    AbsoluteLayout.LayoutBounds="330, 150"
+                    Text="Start"
+                    Clicked="OnStartClicked"/>
+                <Button
+                    AbsoluteLayout.LayoutBounds="330, 10"
+                    Text="Close"/>
+
+            </AbsoluteLayout>
         </VerticalStackLayout>
     </ScrollView>
 
