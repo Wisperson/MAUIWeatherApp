@@ -53,8 +53,6 @@
                 <Entry
                     AbsoluteLayout.LayoutBounds="290, 100"
                     MinimumWidthRequest="100"
-                    FontSize="Micro"
-                    HorizontalOptions="End"
                     Placeholder="City"/>
                 <Button
                     x:Name="StartButton"

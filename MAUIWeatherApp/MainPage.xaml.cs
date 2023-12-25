@@ -47,63 +47,6 @@ namespace MAUIWeatherApp
 
             public WeatherBlock(VerticalStackLayout VSL)
             {
-
-                /*< AbsoluteLayout
-                WidthRequest = "400"
-                HeightRequest = "200"
-                BackgroundColor = "#09295A" >
-
-                < Image
-                    AbsoluteLayout.LayoutBounds = "10,10, 100, 100"
-                    Source = "dotnet_bot.png" />
-                < Label
-                    AbsoluteLayout.LayoutBounds = "120, 10"
-                    Text = "Name" />
-                < Label
-                    AbsoluteLayout.LayoutBounds = "120, 25"
-                    Text = "Name" />
-                < Label
-                    AbsoluteLayout.LayoutBounds = "120, 40"
-                    Text = "Name" />
-                < Label
-                    AbsoluteLayout.LayoutBounds = "120, 55"
-                    Text = "Name" />
-                < Label
-                    AbsoluteLayout.LayoutBounds = "120, 70"
-                    Text = "Name" />
-                < AbsoluteLayout
-                    AbsoluteLayout.LayoutBounds = "10, 120"
-                    HeightRequest = "50"
-                    WidthRequest = "100"
-                    BackgroundColor = "#1A935A" >
-
-                    < Label
-                        AbsoluteLayout.LayoutBounds = "5, 0"
-                        Text = "Wind" />
-                    < Label
-                        AbsoluteLayout.LayoutBounds = "5, 15"
-                        Text = "Wind" />
-                    < Label
-                        AbsoluteLayout.LayoutBounds = "5, 30"
-                        Text = "Wind" />
-                </ AbsoluteLayout >
-                < Entry
-                    AbsoluteLayout.LayoutBounds = "290, 100"
-                    MinimumWidthRequest = "100"
-                    FontSize = "Micro"
-                    HorizontalOptions = "End"
-                    Placeholder = "City" />
-                < Button
-                    x: Name = "StartButton"
-                    AbsoluteLayout.LayoutBounds = "330, 150"
-                    Text = "Start"
-                    Clicked = "OnStartClicked" />
-                < Button
-                    AbsoluteLayout.LayoutBounds = "330, 10"
-                    Text = "Close" />
-
-            </ AbsoluteLayout >*/
-
                 DynamicWeatherContainer = VSL;
 
                 WeatherContainer = new AbsoluteLayout
@@ -126,6 +69,86 @@ namespace MAUIWeatherApp
                 };
                 WeatherContainer.Children.Add(Label_WeatherName);
                 WeatherContainer.SetLayoutBounds(Label_WeatherName, new Rect(120, 10, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_WeatherDescription = new Label
+                {
+                    Text = "Description",
+                };
+                WeatherContainer.Children.Add(Label_WeatherDescription);
+                WeatherContainer.SetLayoutBounds(Label_WeatherDescription, new Rect(120, 25, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_WeatherTemp = new Label
+                {
+                    Text = "Temp",
+                };
+                WeatherContainer.Children.Add(Label_WeatherTemp);
+                WeatherContainer.SetLayoutBounds(Label_WeatherTemp, new Rect(120, 40, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_WeatherHumidity = new Label
+                {
+                    Text = "Humidity",
+                };
+                WeatherContainer.Children.Add(Label_WeatherHumidity);
+                WeatherContainer.SetLayoutBounds(Label_WeatherHumidity, new Rect(120, 55, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_WeatherPressure = new Label
+                {
+                    Text = "Pressure",
+                };
+                WeatherContainer.Children.Add(Label_WeatherPressure);
+                WeatherContainer.SetLayoutBounds(Label_WeatherPressure, new Rect(120, 70, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Container_Wind = new AbsoluteLayout
+                {
+                    WidthRequest = 100,
+                    HeightRequest = 50,
+                    BackgroundColor = Color.FromHex("#1A935A")
+                };
+                WeatherContainer.Children.Add(Container_Wind);
+                WeatherContainer.SetLayoutBounds(Container_Wind, new Rect(10, 120, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_Wind = new Label
+                {
+                    Text = "Wind",
+                };
+                Container_Wind.Children.Add(Label_Wind);
+                Container_Wind.SetLayoutBounds(Label_Wind, new Rect(5, 0, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_WindSpeed = new Label
+                {
+                    Text = "Speed",
+                };
+                Container_Wind.Children.Add(Label_WindSpeed);
+                Container_Wind.SetLayoutBounds(Label_WindSpeed, new Rect(5, 15, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Label_WindDeg = new Label
+                {
+                    Text = "Deg",
+                };
+                Container_Wind.Children.Add(Label_WindDeg);
+                Container_Wind.SetLayoutBounds(Label_WindDeg, new Rect(5, 30, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Button_Close = new Button
+                {
+                    Text = "Close",
+                };
+                WeatherContainer.Children.Add(Button_Close);
+                WeatherContainer.SetLayoutBounds(Button_Close, new Rect(330, 10, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Button_Start = new Button
+                {
+                    Text = "Start",
+                };
+                WeatherContainer.Children.Add(Button_Start);
+                WeatherContainer.SetLayoutBounds(Button_Start, new Rect(330, 150, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+                Entry_City = new Entry
+                {
+                    MinimumWidthRequest = 100,
+                    Placeholder = "City"
+                };
+                WeatherContainer.Children.Add(Entry_City);
+                WeatherContainer.SetLayoutBounds(Entry_City, new Rect(290, 100, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
 
                 DynamicWeatherContainer.Children.Add(WeatherContainer);
             }
