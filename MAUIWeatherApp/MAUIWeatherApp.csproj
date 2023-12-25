@@ -49,6 +49,27 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\01d.png" />
+	  <None Remove="Resources\Images\01n.png" />
+	  <None Remove="Resources\Images\02d.png" />
+	  <None Remove="Resources\Images\02n.png" />
+	  <None Remove="Resources\Images\03d.png" />
+	  <None Remove="Resources\Images\03n.png" />
+	  <None Remove="Resources\Images\04d.png" />
+	  <None Remove="Resources\Images\04n.png" />
+	  <None Remove="Resources\Images\09d.png" />
+	  <None Remove="Resources\Images\09n.png" />
+	  <None Remove="Resources\Images\10d.png" />
+	  <None Remove="Resources\Images\10n.png" />
+	  <None Remove="Resources\Images\11d.png" />
+	  <None Remove="Resources\Images\11n.png" />
+	  <None Remove="Resources\Images\13d.png" />
+	  <None Remove="Resources\Images\13n.png" />
+	  <None Remove="Resources\Images\50d.png" />
+	  <None Remove="Resources\Images\50n.png" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 	</ItemGroup>
 
