@@ -1,5 +1,6 @@
 ﻿namespace MAUIWeatherApp
 {
+    // Динамически дополняемый контейнер отображения информации
     public class DWC
     {
         public VerticalStackLayout DynamicWeatherContainer;

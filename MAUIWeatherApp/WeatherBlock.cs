@@ -1,5 +1,6 @@
 ﻿namespace MAUIWeatherApp
 {
+    // Контейнер с информацией о погоде
     public class WeatherBlock
     {
         DWC dwc;

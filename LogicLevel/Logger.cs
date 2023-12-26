@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace LogicLevel
 {
+    // Логгер для записи ошибок в файл
     public static class Logger
     {
         public static void Write(string message)
@@ -30,16 +31,16 @@ namespace LogicLevel
             }
             catch(Exception ex)
             {
-                ShowWarning("Error writing to log: " + ex.Message);
+                //ShowWarning("Error writing to log: " + ex.Message);
             }
         }
 
-        private static async void ShowWarning(string message)
+        /*private static async void ShowWarning(string message)
         {
             await MainThread.InvokeOnMainThreadAsync(async () =>
             {
                 await Application.Current.MainPage.DisplayAlert("Warning", message, "OK");
             });
-        }
+        }*/
     }
 }

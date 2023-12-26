@@ -1,6 +1,6 @@
 ﻿namespace LogicLevel
 {
-    // All the code in this file is included in all platforms.
+    // Форма ответа на web-запрос
     public class Request
     {
         public bool IsSuccess { get; set; }

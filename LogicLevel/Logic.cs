@@ -10,6 +10,7 @@ namespace LogicLevel
 {
     public static class Logic
     {
+        // Пытается создать и отправить запрос, затем пытается получить ответ, если был получен - обрабатывает
         public static Request GetRequest(string City)
         {
             string URL = $"http://api.openweathermap.org/data/2.5/weather?q={City}&appid={Secrets.API}&units=metric&lang=ru";
